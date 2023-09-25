@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EsmConfiguration id="ff599cad-16f0-4898-8248-985b702494ec" version="2" importRevision="1">
+	<Esms>
+		<Esm id="ed81ab78-0873-4d1b-a468-f7c3c34aef4e" name="ESM1" cpuAffinity="1" timerInterval="500000" taskSchedulerMode="" comment="" readonly="False" />
+	</Esms>
+	<Tasks>
+		<Task id="0b3a585b-9278-4e34-8ef5-93943d1a2fda" name="Idle" taskType="IdleTask" watchdogTime="100000000" executionTimeThreshold="0" coreAffinity="0" stackSize="0" taskBuffer="None" comment="" esmId="ed81ab78-0873-4d1b-a468-f7c3c34aef4e" readonly="False">
+			<ProgramInstances>
+				<ProgramInstance id="e80ec654-6a8a-498a-8eff-3b6d69fe2db8" name="Ping" programType="Main" componentId="00000000-0000-0000-0000-000000000000" libraryName="Arp.Plc.Eclr" componentName="Arp.Plc.Eclr" componentType="EclrComponent" comment="" readonly="False" groupName="" />
+			</ProgramInstances>
+		</Task>
+	</Tasks>
+</EsmConfiguration>

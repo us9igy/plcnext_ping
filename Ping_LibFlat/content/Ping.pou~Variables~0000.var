@@ -1,0 +1,37 @@
+{ CustomGroupDefinition('2b4423b8-2ed3-41f1-80f3-2a2be606fd27', 'Input') }
+{ CustomGroupDefinition('929a2976-5eb8-4098-b8b1-e92efa3d1031', 'Output') }
+{ CustomGroupDefinition('ca677c22-54b0-48a6-8bdb-d1c9b9352289', 'FB') }
+{ CustomGroupDefinition('48612988-4215-4fd0-9cb9-7cfb6a787c46', 'Local') }
+{ CustomGroupDefinition('fb84caa8-36a3-47d9-8bf0-95ff0e8a7b24', 'Default') }
+
+VAR_INPUT
+    xEnable : BOOL { CustomGroupReference('2b4423b8-2ed3-41f1-80f3-2a2be606fd27') } {Id('e4ad8034-c66a-4c9d-b064-3ad035d3df5e')}; (*Enable ping. Default FALSE*)
+    tPing : TIME := TIME#1s { CustomGroupReference('2b4423b8-2ed3-41f1-80f3-2a2be606fd27') } {Id('7b6af671-3333-43a6-867b-3405e6d9bc74')}; (*Ping period. Default 1s*)
+    iPing : INT := INT#5 { CustomGroupReference('2b4423b8-2ed3-41f1-80f3-2a2be606fd27') } {Id('7d421805-4c58-4e08-908f-95e3ebac65e8')}; (*Missed pings to consider host dead. Default 5.*)
+    tTimeout : TIME := TIME#1s { CustomGroupReference('2b4423b8-2ed3-41f1-80f3-2a2be606fd27') } {Id('aeda41b2-4bf4-4e7f-8ec0-b07e4842d2fd')}; (*Timeout. Default 1s*)
+    sIPAddress : STRING { CustomGroupReference('2b4423b8-2ed3-41f1-80f3-2a2be606fd27') } {Id('24f13ea7-614d-46e1-b258-73cfc4d11098')}; (*Ping IP Address. No errors checking!*)
+END_VAR
+
+VAR_OUTPUT
+    xHostAlive : BOOL { CustomGroupReference('929a2976-5eb8-4098-b8b1-e92efa3d1031') } {Id('d9e65833-d8f4-4a2e-a353-6e103bfb4a77')}; (*Pinged host status.*)
+    xOutError : BOOL { CustomGroupReference('929a2976-5eb8-4098-b8b1-e92efa3d1031') } {Id('aff3c93e-ced6-420c-b7da-9372d76e4eeb')}; (*PBCL_SysLinuxShell_11 xError*)
+    wOutError : WORD { CustomGroupReference('929a2976-5eb8-4098-b8b1-e92efa3d1031') } {Id('4eca21a8-fe02-4bc9-9d82-5f255d73da38')}; (*PBCL_SysLinuxShell_11 wDiagCode*)
+END_VAR
+
+VAR
+    PBCL_SysLinuxShell_11 : PBCL_SysLinuxShell_1 { CustomGroupReference('ca677c22-54b0-48a6-8bdb-d1c9b9352289') } {Id('a481999e-e840-4225-893f-9c2bf8f93900')};
+    TP1 : TP { CustomGroupReference('ca677c22-54b0-48a6-8bdb-d1c9b9352289') } {Id('7e437126-4812-4d64-8b80-4889b95ec476')};
+    xExecute : BOOL { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('c6ca72d7-bc7f-4f9a-bb5f-4d39008d9307')};
+    xPollEN : BOOL { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('ab906a39-fd70-43c3-891b-9715f2bd9716')};
+    diTimeout : DINT { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('c39a8bd9-b302-49fd-bc20-3d3f4d5fb6c2')};
+    xError : BOOL { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('8547b36c-6dd5-468d-8132-6ddb47ce219b')};
+    wDiagCode : WORD { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('cdccd46d-a1fb-44fb-abe0-c222d2886e73')};
+    wAddDiagCode : WORD { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('f98de09a-a7cb-4358-a796-e6e645d639cf')};
+    xDone : BOOL { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('00540fa9-c65c-4688-afc3-ebeba0eba2a6')};
+    uiResLength : UINT { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('8d730553-94cf-462b-9d17-4615c81ff56a')};
+    sCommand : PING_CMD { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('0260de87-0ce6-4174-be28-d0477b68a6ad')};
+    sResult : PING_RES { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('a8724c8d-6da9-4f92-9c3a-0ded06872815')};
+    iState : INT { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('d51d1954-c737-4c49-bc52-3a86a5aca6f0')};
+    xInitDone : BOOL { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('f1d77e9e-8831-41ee-bdef-9fce1f68806f')};
+    iCounts : INT { CustomGroupReference('48612988-4215-4fd0-9cb9-7cfb6a787c46') } {Id('7cce4279-f244-455f-a2f1-5be016a5f5a7')};
+END_VAR

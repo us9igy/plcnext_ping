@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReleaseProject>
+    <ReleaseConfiguration>
+        <LibraryName>C:\Users\Public\Documents\PLCnext Engineer\Libraries\Ping_Lib.pcwlx</LibraryName>
+        <LibraryVersion>1.1</LibraryVersion>
+        <LibraryDescription Value="Library for ping devices in the network. Uses system ping - not resource friendly:)" />
+        <LibraryHelpFiles />
+        <LibraryDescriptionFiles />
+        <LibraryId></LibraryId>
+        <NewLibraryIdCreation>True</NewLibraryIdCreation>
+        <CopyVersionInformation>True</CopyVersionInformation>
+        <UseWebHelpSystem>True</UseWebHelpSystem>
+        <RedistributionType>UnlimitedCascaded</RedistributionType>
+        <PemCertificate />
+        <PrivateKeyFile />
+        <PrivateKeyFileErrorMessage />
+        <PrivateKeyFilePassword />
+        <LastSelectedProjectParts>ReleaseIEC</LastSelectedProjectParts>
+        <Items>
+            <Item Id="e639c0f9-db09-46f4-abf7-50216a13f220/606e2993-1c57-411c-b0d2-c57a13c52bbf/0555003d-1270-42f1-b450-568067b5b104" Selected="false" Accessibility="Visible" />
+            <Item Id="e639c0f9-db09-46f4-abf7-50216a13f220/606e2993-1c57-411c-b0d2-c57a13c52bbf/0b8c5319-938b-4702-b8fe-513f021c5740" Selected="true" Accessibility="Visible" />
+            <Item Id="PING_CMD" Selected="true" Accessibility="Visible" />
+            <Item Id="PING_RES" Selected="true" Accessibility="Visible" />
+        </Items>
+    </ReleaseConfiguration>
+</ReleaseProject>

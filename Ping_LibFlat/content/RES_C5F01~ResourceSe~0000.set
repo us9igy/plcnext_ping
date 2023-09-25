@@ -1,0 +1,41 @@
+{ Type('AXCF1152') }
+RESOURCE IEC 61131-3
+{ DeviceProfileWorksheet('DeviceProfile', Id := '722344a4-c4de-4be6-8d3f-dd831d13745d') }
+{ DeviceProfile(
+    Name := 'RES_C5F0101E7D9342A28C18EE3FBD4DC15C',
+    Parent := ( Name := 'AXCF1152', Version := '2023.0.0'), 
+    UpdateType := 'Manual',
+    FilesIni := 
+    [
+    ],
+    CommunicationMetadata := 'UniqueId=TcpIp_Simulation',
+    CommunicationType := 'TcpIp',
+    CommunicationParameters := 'DLL socomm.dll -ip0.0.0.0 -p41100 -to2000',
+    DownloadFiles := 
+    [
+    ],
+    SimulationMode :=
+    (
+        FilesIni := 
+        [
+        ],
+        DeviceDescription := 
+        (
+            MaxProgramSize := '8388608',
+            MaxDataSize := '33554424',
+            MaxRetainDataSize := '0',
+            MaxTaskPriority := '96',
+            Endianness := 'LittleEndian'
+        ),
+        DownloadFiles := 
+        [
+        ]
+    )
+)}
+
+
+TASK Idle () { Watchdog(T#100ms), Id('0b3a585b-9278-4e34-8ef5-93943d1a2fda') };
+
+PROGRAM Ping WITH Idle : Main { Id('e80ec654-6a8a-498a-8eff-3b6d69fe2db8') };
+
+END_RESOURCE
